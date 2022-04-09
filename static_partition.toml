@@ -1,0 +1,14 @@
+[[partitions]]
+name = "Atlanta"
+index = 0
+host = "localhost:8080"
+
+[[partitions]]
+name = "Texas"
+index = 1
+host = "localhost:8081"
+
+[[partitions]]
+name = "SanFrancisco"
+index = 2
+host = "localhost:8082"
