@@ -1,0 +1,9 @@
+[[partitions]]
+name = "test"
+index = 0
+host ="test:8080"
+
+[[partitions]]
+name = "test2"
+index = 1
+host = "test:8081"

@@ -8,8 +8,6 @@ import (
 	"fmt"
 	"log"
 	"net/http"
-
-	"github.com/BurntSushi/toml"
 )
 
 var (
@@ -39,10 +37,7 @@ func main() {
 	fmt.Println("Welcome to DistributeKV!")
 
 	// read the partition config
-	var partitions config.Partitions
-	if _, err := toml.DecodeFile(*partitionConfigFlag, &partitions); err != nil {
-		log.Fatalf("toml.Decode(%s): %v", *partitionConfigFlag, err)
-	}
+	var partitions = config.ParseCofig(*partitionConfigFlag)
 
 	if *launchFlag == "DB" {
 		var curPartition config.Partition
